@@ -7,6 +7,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/skeleton.css">
+
   </head>
 
  <body>
@@ -15,21 +18,29 @@
       <h1>Event Tracker</h1>
     </header>
 
-    <main>
-        <section class="events">
-          <header>Event 1</header>
-        </section>
-        <section class="events">
-          <header>Event 2</header>
-        </section>
-        <section class="events">
-          <header>Event 3</header>
-        </section>
-        <section class="events">
-          <header>Event 4</header>
-        </section>
-      </main>
+    <div class="sidebar">
+    <div class="city-search">
+      <h2>Search City Events</h2>
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button onclick="searchCityEvents()">Search</button> <!--This line of html references a function for searching for events in the specific city-->
+    </div>
+    </div>
 
+    <div>
+      <div id="event-container">
+        <div id="event-info">
+          <h2 id="event-title"></h2>
+          <img id="event-photo" src="" alt="Event Photo">
+          <p id="date"></p>
+          <p id="location"></p>
+          <p id="time"></p>
+          <p id="temperature"></p> <!--Using weather API-->
+          <p id="weather-icon"></p> <!--Using weather API-->
+        </div>
+      </div>
+
+      <script src="./assets/js/script.js"></script>
+    </body>
     </body>
   
   </html>
