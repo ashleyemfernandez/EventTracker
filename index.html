@@ -2,45 +2,44 @@
 
 <html>
 
-  <head>
+<head>
     <title>Event Tracker</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+ 
 
-  </head>
+</head>
 
- <body>
-
-    <header>
-      <h1>Event Tracker</h1>
+<body>
+    <header class="header">
+        <h1 class="headingFont">Event Tracker</h1>
     </header>
 
-    <div class="sidebar">
-    <div class="city-search">
-      <h2>Search City Events</h2>
-      <input type="text" id="cityInput" placeholder="Enter city name">
-      <button onclick="searchCityEvents()">Search</button> <!--This line of html references a function for searching for events in the specific city-->
-    </div>
-    </div>
+    <div class="main">
+        <div class="row">
+            <div class="three columns left">
+                <div class="city-search">
+                    <h2 class="headerTwo">Search City Events</h2>
+                    <input type="text" id="cityInput" class="u-full-width" placeholder="Enter city name"><br>
+                    <button class="button-primary" id="searchBtn">Search</button>
+                    <hr>
+                    <div class="historyItems"></div> <!--all history items go here-->
+                </div>
+            </div>
 
-    <div>
-      <div id="event-container">
-        <div id="event-info">
-          <h2 id="event-title"></h2>
-          <img id="event-photo" src="" alt="Event Photo">
-          <p id="date"></p>
-          <p id="location"></p>
-          <p id="time"></p>
-          <p id="temperature"></p> <!--Using weather API-->
-          <p id="weather-icon"></p> <!--Using weather API-->
+            <div class="nine columns right">
+                <h2 class="headerTwo">Events in <span class="cityName"></span></h2>
+                <div class="eventInfoDiv"></div> <!-- address from clicked button will go inside this div-->
+                <div id="map"></div> <!--map goes here-->
+                <div id="event-container"></div> <!--All event cards go here-->
+            </div>
         </div>
-      </div>
 
-      <script src="./assets/js/script.js"></script>
-    </body>
-    </body>
-  
-  </html>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvUSMreJT32LU9jP9Zeet-VYDoEEK0gUI&callback=initMap"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
