@@ -1,0 +1,86 @@
+.main{
+    width: 100%;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    background-color: #122620;
+    padding: 10px;
+}
+
+.headingFont{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.left{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.headerTwo{
+    font-size: 35px;
+}
+
+.historyBtn{
+    width: 100%;
+    background-color: #B68D40;
+    color: white;
+    font-size: 15px;
+}
+
+.right{
+    padding-top: 20px;
+}
+
+.card{
+    background-color:  #B68D40;
+    width: 22%;
+    display:inline-block;
+    padding: 5px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.image{
+    width: 80%;
+    height: 80px;
+    object-fit:contain;
+}
+
+#event-container{
+    display:flex;
+    width: 100%;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#map{
+    width: 99%;
+    height: 250px;
+    display: block;
+    margin-left: 8px;
+    
+}
+
+.eventInfoDiv{
+    font-size: 20px;
+}
+
+.black-background {
+    background-color: #122620 ;
+}
+
+.cardBtn {
+    color: #122620;
+}
