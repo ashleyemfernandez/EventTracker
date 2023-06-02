@@ -63,10 +63,20 @@ fetch("https://app.ticketmaster.com/discovery/v2/events.json?city=["+value+"]&si
             console.log(event)
             let cardObject = document.createElement("div");
             cardObject.className="card"
-            let date = `${event.dates.start.localDate}, ${event.dates.start.localTime}` //used template literal to loop through data and pull data into card
+            let date = new Date(event.dates.start.localDate).toLocaleDateString(undefined, {
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+              }); //used template literal to loop through data and pull data into card - A updated to show only month and day and time in hours and minutes
             let address =`${event._embedded.venues[0].address.line1}, ${event._embedded.venues[0].city.name}, ${event._embedded.venues[0].state.stateCode}`
             
-            cardObject.innerHTML= `<h5>${event.name}</h5><img class="image" src=${event.images[0].url}><p>${date}</p><p>${address}</p><button class="cardBtn" value="${address}">Pin to map</button>`
+            cardObject.innerHTML = `
+          <h5 style="font-weight: bold; font-size: 20px;">${event.name}</h5> 
+          <img class="image" src=${event.images[0].url}>
+          <p>${date}</p>
+          <p>${address}</p>
+          <button class="cardBtn" value="${address}">Pin to map</button>`; //made title bigger and bolder
 
             eventContainer.appendChild(cardObject)
 
