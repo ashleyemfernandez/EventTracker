@@ -23,7 +23,8 @@ let mapOptions = {
 }
 map = new google.maps.Map(document.getElementById("map"), mapOptions)
 }
-
+const image =
+    "https://img.icons8.com/color/48/music-band.png";
 //pulls the value of cardBtn and displays a marker on the map
 // TODO: markers keep adding instead of updating/clearing off map, figure out how to remove markers.
 function codeAddress(address){
@@ -32,18 +33,7 @@ function codeAddress(address){
             map.setCenter(results[0].geometry.location);
             let marker = new google.maps.Marker({
                 map: map,
-                icon: {
-                          path: user-music.icon[4],
-                          fillColor: “#D6AD60,
-                          fillOpacity: 1,
-                          anchor: new google.maps.Point(
-                            user-music.icon[0] / 2, // width
-                            user-music.icon[1] // height
-                          ),
-                          strokeWeight: 1,
-                          strokeColor: "#ffffff",
-                          scale: 0.075,
-                        },
+                icon: image,
                 position: results[0].geometry.location
             })
         } else {
