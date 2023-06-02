@@ -4,9 +4,12 @@
 }
 
 .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     height: 80px;
-    background-color: #33C3f0;
+    background-color: #122620;
     padding: 10px;
 }
 
@@ -27,7 +30,7 @@
 
 .historyBtn{
     width: 100%;
-    background-color: #33C3f0;
+    background-color: #B68D40;
     color: white;
     font-size: 15px;
 }
@@ -37,7 +40,7 @@
 }
 
 .card{
-    background-color:  #33C3f0;
+    background-color:  #B68D40;
     width: 22%;
     display:inline-block;
     padding: 5px;
@@ -66,8 +69,17 @@
     width: 99%;
     height: 250px;
     display: block;
+    margin-left: 8px;
 }
 
 .eventInfoDiv{
     font-size: 20px;
+}
+
+.black-background {
+    background-color: #122620 ;
+}
+
+.cardBtn {
+    color: #122620;
 }
