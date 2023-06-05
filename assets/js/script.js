@@ -23,7 +23,8 @@ let mapOptions = {
 }
 map = new google.maps.Map(document.getElementById("map"), mapOptions)
 }
-
+const image =
+    "https://img.icons8.com/color/48/music-band.png";
 //pulls the value of cardBtn and displays a marker on the map
 // TODO: markers keep adding instead of updating/clearing off map, figure out how to remove markers.
 function codeAddress(address){
@@ -32,6 +33,7 @@ function codeAddress(address){
             map.setCenter(results[0].geometry.location);
             let marker = new google.maps.Marker({
                 map: map,
+                icon: image,
                 position: results[0].geometry.location
             })
         } else {
@@ -69,7 +71,7 @@ fetch("https://app.ticketmaster.com/discovery/v2/events.json?city=["+value+"]&si
                 hour: "numeric",
                 minute: "numeric",
               }); //used template literal to loop through data and pull data into card - A updated to show only month and day and time in hours and minutes
-            let address =`${event._embedded.venues[0].address.line1}, ${event._embedded.venues[0].city.name}, ${event._embedded.venues[0].state.stateCode}`
+            let address =`${event._embedded.venues[0].name}, ${event._embedded.venues[0].address.line1}, ${event._embedded.venues[0].city.name}, ${event._embedded.venues[0].state.stateCode}`
             
             cardObject.innerHTML = `
           <h5 style="font-weight: bold; font-size: 20px;">${event.name}</h5> 
