@@ -2,8 +2,6 @@
 
 ## Description
 
-<!-- Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide: -->
-
 This web application is an event tracker, which allows any user to type their desired city and find multiple events within that city. They are provided with the date, time and location of the event as well as an extra feature of pinning the location on the map above the listed events.
 
 ## Table of Contents 
