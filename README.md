@@ -7,8 +7,11 @@
 This web application is an event tracker, which allows any user to type their desired city and find multiple events within that city. They are provided with the date, time and location of the event as well as an extra feature of pinning the location on the map above the listed events.
 
 ## Table of Contents 
+
 - [Installation](#installation)
+
 - [Usage](#usage)
+
 - [Credits](#credits)
 
 ## Installation
