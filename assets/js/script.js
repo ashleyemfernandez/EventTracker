@@ -34,6 +34,7 @@ function codeAddress(address){
             let marker = new google.maps.Marker({
                 map: map,
                 icon: image,
+                title: address,
                 animation: google.maps.Animation.DROP,
                 position: results[0].geometry.location
             })
